@@ -23,9 +23,9 @@ namespace LazyOptimiser
             private set { _shouldOptimise = value; PlayerPrefs.SetInt("lazyoptimiser.shouldOptimise", value ? 1 : 0); }
             get => _shouldOptimise ?? (ShouldOptimise = PlayerPrefs.GetInt("lazyoptimiser.shouldOptimise", 1) == 1);
         }
-        
 
-        [MenuItem("Tools/Lazy Optimiser/Toggle Optimiser", false, 1)]
+
+        [MenuItem("Analysis+Performance/Toggle Lazy Optimiser", false, 1)]
         public static void ToggleOptimiser()
         {
             ShouldOptimise = !ShouldOptimise;

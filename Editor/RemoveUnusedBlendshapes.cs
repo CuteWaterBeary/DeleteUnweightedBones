@@ -12,7 +12,7 @@ namespace LazyOptimiser
     {
         public int callbackOrder => -95;
 
-        [MenuItem("Tools/Lazy Optimiser/Print Unused Blendshapes")]
+        [MenuItem("Analysis+Performance/Print Unused Blendshapes")]
         public static void PrintUnusedBlendshapes()
         {
             ProcessAvatar(Selection.activeGameObject);
@@ -68,7 +68,7 @@ namespace LazyOptimiser
                         blendshapes.Add(skinnedMesh.sharedMesh.GetBlendShapeName(i));
                     }
                 }
-                
+
                 usedBlendshapes.Add(skinnedMesh, blendshapes);
                 animatedBlendshapes.Add(skinnedMesh, aniBlendshapes);
             }

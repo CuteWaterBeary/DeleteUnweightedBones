@@ -14,7 +14,7 @@ namespace LazyOptimiser
     {
         public int callbackOrder => -100;
 
-        [MenuItem("Tools/Lazy Optimiser/Print Unused GameObjects")]
+        [MenuItem("Analysis+Performance/Print Unused GameObjects")]
         public static void PrintUnusedGameObjects()
         {
             ProcessAvatar(Selection.activeGameObject);
@@ -52,9 +52,9 @@ namespace LazyOptimiser
                         else if (aniRef.referencedObjects[i] is MonoBehaviour refMono)
                         {
                             t = refMono.transform;
-                        } 
+                        }
                         else continue; //Failed to find the transform
-                        
+
                         // Euan: Traverse each level manually, stop where the child isn't active
                         foreach (var go in t.GetComponentsInChildren<Transform>(true))
                         {

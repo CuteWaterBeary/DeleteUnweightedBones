@@ -14,7 +14,7 @@ namespace LazyOptimiser
             get => _shouldCleanup ?? (ShouldCleanup = PlayerPrefs.GetInt("lazyoptimiser.shouldCleanup", 1) == 1);
         }
 
-        [MenuItem("Tools/Lazy Optimiser/Toggle Asset Cleanup", false, 2)]
+        [MenuItem("Analysis+Performance/Toggle Asset Cleanup", false, 2)]
         public static void ToggleCleanup()
         {
             ShouldCleanup = !ShouldCleanup;

@@ -18,7 +18,7 @@ namespace LazyOptimiser
 
         public int callbackOrder => -90;
 
-        [MenuItem("Tools/Lazy Optimiser/Print Mergeable Meshes")]
+        [MenuItem("Analysis+Performance/Print Mergeable Meshes")]
         public static void PrintMergeableMeshes()
         {
             ProcessAvatar(Selection.activeGameObject);
@@ -81,7 +81,7 @@ namespace LazyOptimiser
                         skinnedMeshDatas[0].Apply(skinnedMeshes[0]);
 
                         Debug.Log($"Processing: {skinnedMeshes[0].gameObject.name}");
-                        
+
 
                         for (int i = 1; i < skinnedMeshes.Count; i++)
                         {
